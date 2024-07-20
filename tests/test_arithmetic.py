@@ -23,3 +23,11 @@ def test_div():
     assert div(0, 1) == 0
     assert div(-1, -1) == 1
     assert div(1, -1) == -1
+
+    # Test division by zero (should raise ValueError)
+    try:
+        div(1, 0)
+        assert False, "Expected ValueError when dividing by zero"
+    except ValueError:
+        pass
+
