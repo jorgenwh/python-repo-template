@@ -2,9 +2,11 @@ name: Run tests
 
 on:
   push:
-    branches: [main]
+    branches:
+      - '**' # Matches any branch
   pull_request:
-    branches: [main]
+    branches:
+      - main
 
 jobs:
   test:
