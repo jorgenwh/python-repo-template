@@ -1,4 +1,4 @@
-from example import add, sub, mul, div
+from example import add, sub, mul, div, mod
 
 def test_add():
     assert add(1, 2) == 3
@@ -31,3 +31,7 @@ def test_div():
     except ValueError:
         pass
 
+def test_mod():
+    assert mod(1, 2) == 1
+    assert mod(0, 1) == 0
+    assert mod(-1, -1) == 0
